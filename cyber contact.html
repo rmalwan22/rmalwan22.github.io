@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Rahaf Alwan</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: #fff0f5;
+        }
+        .menu {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .menu a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        .form {
+            background: white;
+            padding: 25px;
+            border: 2px solid #ff69b4;
+            border-left: 10px solid #ff69b4;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ff69b4;
+        }
+        button {
+            padding: 10px 20px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+        }
+        h2 {
+            color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <a href="index.html">Home</a>  
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="form">
+        <h2>Contact Form</h2>
+        <form>
+            <div>
+                <label>Full Name:</label>
+                <input type="text" required>
+            </div>
+
+            <div>
+                <label>Email Address:</label>
+                <input type="email" required>
+            </div>
+
+            <div>
+                <label>Country:</label>
+                <select required>
+                    <option value="">Select Country</option>
+                    <option>Jordan</option>
+                    <option>Saudi Arabia</option>
+                    <option>UAE</option>
+                    <option>Qatar</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Message:</label>
+                <textarea rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
